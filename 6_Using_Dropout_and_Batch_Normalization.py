@@ -20,14 +20,16 @@ model.compile(
 )
 
 history = model.fit(
-    X_train, y_train,
-    validation_data=(X_valid, y_valid),
-    batch_size=256,
-    epochs=100,
-    verbose=0,
+        X_train, y_train,
+        validation_data=(X_valid, y_valid),
+        batch_size=256,
+        epochs=100,
+        verbose=0,
 )
 
 
 # Show the learning curves
 history_df = pd.DataFrame(history.history)
 history_df.loc[:, ['loss', 'val_loss']].plot();
+
+print(x)
